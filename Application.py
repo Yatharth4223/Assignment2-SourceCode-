@@ -1,6 +1,7 @@
 '''This Program is created by Yatharth Jain'''
 
 #importing User class from user module
+from calendar import month
 from user import User
 
 #create class Application
@@ -49,8 +50,16 @@ class Application:
         # print monthly production
         print(f"Monthly Production: {self.monthlyProduction}")
         #create a for loop for months
+        months = 1
+        while(months<=12):
             #create an instance of User class, i.e customer 
-            #month i:
-                #manufactured
-                #return customer.itemsSold
-                #return customer.stocked
+            customer = User(self.stock,self.monthlyProduction,self.manufactureCost,self.salePrice)
+            #month i
+            print(f"Month {months}:")
+            #manufactured
+            print(f"Manufactured: {customer._unitsManufactured}")
+            #return customer.itemsSold
+            print(f"Sold: {customer.itemsSold}")
+            #return customer.stocked
+            print(f"Stock: {customer._stock}")
+            months += 1
