@@ -18,8 +18,16 @@ class User:
         self.totalItemsProduced = 0
         #creating variable totalItemsSold
         self.totalItemsSold = 0
+        self.totalLoss = 0
+        self.totalProfit = 0 
     
     def updateValues(self):
         self._stock += self._unitsManufactured - self.itemsSold
-        self.totalItemsProduced = (self._unitsManufactured*12) + self._stock
-        self.totalItemsSold += self.itemsSold 
+        self.totalItemsProduced += (self._unitsManufactured)
+        self.totalItemsSold += self.itemsSold
+
+    def toCheckProfitLoss(self):
+        if(self.totalItemsProduced*self._manufactureCost - self.totalItemsSold*self._salePrice) >0:
+            self.totalLoss = self.totalItemsProduced*self._manufactureCost - self.totalItemsSold*self._salePrice
+        else:
+            self.totalProfit = self.totalItemsSold*self._salePrice - self.totalItemsProduced*self._manufactureCost 
