@@ -16,7 +16,7 @@ class Application:
 
     # HelloMessage function
     def HelloMessage():
-        print("Welcome to programming principles Sample Product Inventory")    
+        print("\n Welcome to programming principles Sample Product Inventory")    
     #TakeUserInput function
     def takeUserInput(self):
         #Enter product code
@@ -31,20 +31,23 @@ class Application:
         self.manufactureCost = input("Please enter the Product Manufacture Cost: ")
         # enter monthly estimated production cost
         self.monthlyProduction = input("Please enter the monthly production: ")
-        
-    # displayUserInput function
-    def displayUserInput():
-        #print product code
-        #print(productCode) 
+    
+    # Display Message
+    print("\n *******Programming Principles Sample Stock Statement******* \n")
 
+    # displayUserInput function
+    def displayUserInput(self):
+        #print product code
+        print(f"Product Code: {self.productCode}")
         #print product name
+        print(f"Product Name {self.productName}")
 
         #print sale price
-
+        print(f"Sale Price: {self.salePrice}")
         # print manufacture cost
-
+        print(f"Manufacture Cost: {self.manufactureCost}")
         # print monthly production
-
+        print(f"Monthly Production: {self.monthlyProduction}")
         #create a for loop for months
             #create an instance of User class, i.e customer 
             #month i:
