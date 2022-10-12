@@ -5,28 +5,37 @@ from user import User
 
 #create class Application
 class Application:
+    
+    def __init__(self):
+        self.productCode = 0
+        self.productName = ""
+        self.stock = 0
+        self.salePrice = 0
+        self.manufactureCost = 0
+        self.monthlyProduction = 0
 
     # HelloMessage function
     def HelloMessage():
         print("Welcome to programming principles Sample Product Inventory")    
     #TakeUserInput function
-    def takeUserInput():
+    def takeUserInput(self):
         #Enter product code
-        productCode =input("Please enter the Product Code: ")
+        self.productCode =input("Please enter the Product Code: ")
         # enter product name
-        productName =input("Please enter the Product Name: ")
+        self.productName =input("Please enter the Product Name: ")
         # enter current stock
-        stock = input("Please Enter the current Stock: ")
+        self.stock = input("Please Enter the current Stock: ")
         # enter product sale price
-        salePrice = input("Please enter the Product Sale Price: ")
+        self.salePrice = input("Please enter the Product Sale Price: ")
         # enter product manufacture cost
-        manufactureCost = input("Please enter the Product Manufacture Cost: ")
+        self.manufactureCost = input("Please enter the Product Manufacture Cost: ")
         # enter monthly estimated production cost
-        monthlyProduction = input("Please enter the monthly production: ")
-
-    # displayUserInput()
+        self.monthlyProduction = input("Please enter the monthly production: ")
         
-        #print product code 
+    # displayUserInput function
+    def displayUserInput():
+        #print product code
+        #print(productCode) 
 
         #print product name
 
