@@ -20,6 +20,8 @@ class User:
         self.totalItemsSold = 0
         self.totalLoss = 0
         self.totalProfit = 0 
+        #creating a variable isProfit to check if it is profit or loss
+        self.isProfit = False
     
     def updateValues(self):
         self._stock += self._unitsManufactured - self.itemsSold
@@ -31,3 +33,4 @@ class User:
             self.totalLoss = self.totalItemsProduced*self._manufactureCost - self.totalItemsSold*self._salePrice
         else:
             self.totalProfit = self.totalItemsSold*self._salePrice - self.totalItemsProduced*self._manufactureCost 
+            self.isProfit = True

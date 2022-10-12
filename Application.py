@@ -63,3 +63,11 @@ class Application:
             #return customer.stocked
             print(f"Stock: {customer._stock}")
             months += 1
+        
+        #net Profit or loss
+        if (customer.isProfit ==True):
+            print(f"Net Profit: {customer.totalProfit}")
+        elif (customer.isPorfit ==False):
+            print(f"Net Loss: {customer.totalLoss}")
+        else:
+            print("No net profit or loss earned!")
